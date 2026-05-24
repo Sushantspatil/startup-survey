@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Drive Vehicle Sharing App</title>
+    <title>DriveShare Survey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="top-bar">
+        🚙 DriveShare Survey
+    </div>
+
     <div class="container">
         <header class="header">
-            <h1>Self-Drive Vehicle Sharing App 🚲🚗</h1>
+            <h1>DriveShare 👋</h1>
             <p>Imagine booking a nearby bike or car instantly and driving it yourself — no driver, no waiting, complete
-                freedom 🚲🚗 We’re exploring a new startup idea for self-drive vehicle sharing in India, where people
-                can rent nearby vehicles from local owners safely and affordably. This quick survey will help us
-                understand real demand,pricing expectations, trust concerns, and the features people actually want.
-            </p>
+                freedom. We’re exploring a new startup idea for self-drive vehicle sharing in India. Your feedback
+                shapes the future of mobility.</p>
         </header>
 
         <form id="survey-form" action="https://api.web3forms.com/submit" method="POST">
@@ -29,7 +31,7 @@
 
             <!-- SECTION 1 -->
             <div class="section">
-                <h2 class="section-title">About You</h2>
+                <h2 class="section-title">👤 About You</h2>
 
                 <div class="question-group">
                     <label>1. Age Group <span class="required">*</span></label>
@@ -69,7 +71,7 @@
 
             <!-- SECTION 2 -->
             <div class="section">
-                <h2 class="section-title">User Interest</h2>
+                <h2 class="section-title">🧭 User Interest</h2>
 
                 <div class="question-group">
                     <label>4. How often do you use Uber/Rapido/Ola? <span class="required">*</span></label>
@@ -136,8 +138,7 @@
                 </div>
 
                 <div class="question-group">
-                    <label>8. Main reason you would use it? (Select all that apply) <span
-                            class="required">*</span></label>
+                    <label>8. Main reason you would use it? <span class="required">*</span></label>
                     <div class="options-grid">
                         <label class="option-card"><input type="checkbox" name="reason"
                                 value="College/office commute"><span>College/office commute</span></label>
@@ -151,8 +152,6 @@
                                 value="Privacy/freedom"><span>Privacy/freedom</span></label>
                         <label class="option-card"><input type="checkbox" name="reason" value="Fun experience"><span>Fun
                                 experience</span></label>
-                        <label class="option-card"><input type="checkbox" name="reason"
-                                value="Other"><span>Other</span></label>
                     </div>
                 </div>
 
@@ -183,12 +182,14 @@
                 </div>
             </div>
 
-            <!-- SECTION 3 -->
-            <div class="section">
-                <h2 class="section-title">Trust & Safety</h2>
+            <!-- SECTION 3: TRUST AND SAFETY (BLUE CARD) -->
+            <div class="section card-trust">
+                <div class="trust-watermark">🛡️</div>
+                <h2 class="section-title">🛡️ Trust & Safety</h2>
 
                 <div class="question-group">
-                    <label>11. Biggest concerns? (Select all that apply) <span class="required">*</span></label>
+                    <label>11. Biggest concerns? <span class="required">*</span></label>
+                    <p class="help-text">Select all that apply</p>
                     <div class="options-grid">
                         <label class="option-card"><input type="checkbox" name="concerns"
                                 value="Vehicle damage disputes"><span>Vehicle damage disputes</span></label>
@@ -198,58 +199,52 @@
                                 value="Scam/fraud"><span>Scam/fraud</span></label>
                         <label class="option-card"><input type="checkbox" name="concerns"
                                 value="Vehicle condition"><span>Vehicle condition</span></label>
-                        <label class="option-card"><input type="checkbox" name="concerns"
-                                value="Hidden charges"><span>Hidden charges</span></label>
-                        <label class="option-card"><input type="checkbox" name="concerns"
-                                value="Privacy"><span>Privacy</span></label>
-                        <label class="option-card"><input type="checkbox" name="concerns"
-                                value="Insurance issues"><span>Insurance issues</span></label>
                     </div>
                 </div>
 
                 <div class="question-group">
-                    <label>12. Which features would build trust? (Select all that apply) <span
-                            class="required">*</span></label>
+                    <label>12. What would build your trust? <span class="required">*</span></label>
                     <div class="options-grid">
-                        <label class="option-card"><input type="checkbox" name="trust_features"
-                                value="Driving license verification"><span>License verification</span></label>
                         <label class="option-card"><input type="checkbox" name="trust_features"
                                 value="Aadhaar/KYC verification"><span>Aadhaar/KYC</span></label>
                         <label class="option-card"><input type="checkbox" name="trust_features"
-                                value="GPS live tracking"><span>GPS tracking</span></label>
+                                value="GPS live tracking"><span>GPS Tracking</span></label>
                         <label class="option-card"><input type="checkbox" name="trust_features"
-                                value="Ratings & reviews"><span>Ratings & reviews</span></label>
-                        <label class="option-card"><input type="checkbox" name="trust_features"
-                                value="Security deposit protection"><span>Deposit protection</span></label>
-                        <label class="option-card"><input type="checkbox" name="trust_features"
-                                value="Customer support"><span>Customer support</span></label>
-                        <label class="option-card"><input type="checkbox" name="trust_features"
-                                value="Insurance coverage"><span>Insurance</span></label>
+                                value="Insurance coverage"><span>Insurance coverage</span></label>
                         <label class="option-card"><input type="checkbox" name="trust_features"
                                 value="Damage reporting system"><span>Damage reporting</span></label>
                     </div>
                 </div>
             </div>
 
-            <!-- SECTION 4 -->
-            <div class="section">
-                <h2 class="section-title">Owner Perspective</h2>
+            <!-- SECTION 4: OWNER PERSPECTIVE (LIGHT BLUE CARD) -->
+            <div class="section card-owner">
+                <h2 class="section-title">🚗 Own a vehicle?</h2>
 
                 <div class="question-group">
-                    <label>13. Would you rent your own bike/car to earn extra income? <span
-                            class="required">*</span></label>
-                    <div class="options-grid">
-                        <label class="option-card"><input type="radio" name="rent_own_vehicle" value="Yes"
-                                required><span>Yes</span></label>
-                        <label class="option-card"><input type="radio" name="rent_own_vehicle"
-                                value="Maybe"><span>Maybe</span></label>
-                        <label class="option-card"><input type="radio" name="rent_own_vehicle"
-                                value="No"><span>No</span></label>
+                    <label>13. Earn up to ₹10,000+ per month by listing your bike or car when you're not using it. Would
+                        you rent your vehicle? <span class="required">*</span></label>
+                    <div class="grid-2">
+                        <label class="square-card">
+                            <input type="radio" name="rent_own_vehicle" value="Yes" required>
+                            <span class="icon">✔️</span>
+                            <span class="label">Yes</span>
+                        </label>
+                        <label class="square-card">
+                            <input type="radio" name="rent_own_vehicle" value="Maybe">
+                            <span class="icon">❓</span>
+                            <span class="label">Maybe</span>
+                        </label>
+                        <label class="square-card" style="grid-column: span 2;">
+                            <input type="radio" name="rent_own_vehicle" value="No">
+                            <span class="icon">❌</span>
+                            <span class="label">No</span>
+                        </label>
                     </div>
                 </div>
 
                 <div class="question-group">
-                    <label>14. Minimum earning expected per month from renting your vehicle?</label>
+                    <label>14. Minimum earning expected per month?</label>
                     <div class="options-grid">
                         <label class="option-card"><input type="radio" name="expected_earnings"
                                 value="Under 2000"><span>Under ₹2,000</span></label>
@@ -261,11 +256,12 @@
                                 value="10000+"><span>₹10,000+</span></label>
                     </div>
                 </div>
+
             </div>
 
             <!-- SECTION 5 -->
             <div class="section">
-                <h2 class="section-title">Final Feedback</h2>
+                <h2 class="section-title">💡 Final Suggestions</h2>
 
                 <div class="question-group">
                     <label>15. Would you try this app if launched in your city? <span class="required">*</span></label>
@@ -279,23 +275,31 @@
                 </div>
 
                 <div class="question-group">
-                    <label for="suggestions">16. Any suggestions or concerns?</label>
+                    <label for="suggestions">16. Anything else you'd like to see in a self-drive service?</label>
                     <textarea id="suggestions" name="suggestions" class="textarea-input"
                         placeholder="Tell us what you think..." rows="4"></textarea>
                 </div>
             </div>
 
             <div class="submit-wrapper">
-                <button type="submit" class="btn-submit">Submit Survey</button>
+                <button type="submit" class="btn-submit">Submit Survey ➢</button>
             </div>
         </form>
 
         <div id="success-message" class="hidden">
-            <div class="success-icon">✓</div>
+            <div class="success-icon">✨</div>
             <h2>Thank You!</h2>
-            <p>Thank you for helping validate this startup idea ❤️ Your feedback is genuinely valuable.</p>
+            <p>Thank you for helping validate this startup idea. Your feedback is genuinely valuable.</p>
         </div>
     </div>
+
+    <!-- Bottom Nav -->
+    <div class="footer-nav">
+        <div class="footer-icon active">📋</div>
+        <div class="footer-icon">💬</div>
+        <div class="footer-icon">👤</div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
